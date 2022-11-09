@@ -21,3 +21,5 @@ availability_zones = [
 aws_region= "us-east-1"
 
 aws_account_ids= null
+
+vpc_cidr_block = "172.33.0.0/16"
