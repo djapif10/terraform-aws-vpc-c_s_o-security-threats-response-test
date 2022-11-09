@@ -3,13 +3,14 @@ module "sandbox_vpc" {
 
   availability_zones        = var.availability_zones
   environment               = var.environment
-  vpc_cidr_block            = "172.33.0.0/16"
+  
+  # Changed to variable, defined deafult value in terraform.tfvars 
+  vpc_cidr_block            = var.vpc_cidr_block
+  
   public_subnet_cidr_blocks = var.public_subnet_cidr_blocks
   
   # Added private subnets definition 11/08/2022 - ST
   private_subnet_cidr_blocks = var.private_subnet_cidr_blocks
 }
 
-output "vpc_id" {
-  value = module.sandbox_vpc.id
-}
+
