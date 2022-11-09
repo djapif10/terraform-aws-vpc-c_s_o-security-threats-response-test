@@ -9,6 +9,7 @@ module "sandbox_vpc" {
   
   public_subnet_cidr_blocks = var.public_subnet_cidr_blocks
   
+  
   # Added private subnets definition 11/08/2022 - ST
   private_subnet_cidr_blocks = var.private_subnet_cidr_blocks
 }
